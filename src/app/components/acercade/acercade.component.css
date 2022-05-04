@@ -1,0 +1,16 @@
+.espaTitulo app-boton-espa {
+    float: right;
+}
+
+.seccion {
+    width: 98%;
+    border-radius: 10px;
+    border: 2px solid rgb(94, 94, 94);
+    background-color: white;
+}
+
+h3 {
+    font-size: 20px;
+    margin: 15px 0px 0px 30px;
+    float: left;
+}

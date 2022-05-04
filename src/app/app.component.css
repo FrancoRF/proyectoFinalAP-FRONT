@@ -1,0 +1,10 @@
+.contenedorPrincipal {
+    background-color: rgba(214, 214, 214, 0.767);
+    padding: 20px;
+    max-width: 98%;
+    max-height: 98%;
+    margin: 15px;
+    border: 2px solid black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}

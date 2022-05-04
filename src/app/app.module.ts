@@ -22,6 +22,10 @@ import { AgregarPerComponent } from './components/cabecera/agregar-per/agregar-p
 import { BotonPerComponent } from './components/cabecera/boton-per/boton-per.component';
 import { PerItemComponent } from './components/cabecera/per-item/per-item.component';
 import { PerfilesComponent } from './components/cabecera/perfiles/perfiles.component';
+import { AgregarEduComponent } from './components/educacion/agregar-edu/agregar-edu.component';
+import { BotonEduComponent } from './components/educacion/boton-edu/boton-edu.component';
+import { EduItemComponent } from './components/educacion/edu-item/edu-item.component';
+import { EducacionesComponent } from './components/educacion/educaciones/educaciones.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +46,10 @@ import { PerfilesComponent } from './components/cabecera/perfiles/perfiles.compo
     BotonPerComponent,
     PerItemComponent,
     PerfilesComponent,
+    AgregarEduComponent,
+    BotonEduComponent,
+    EduItemComponent,
+    EducacionesComponent,
        
   ],
   imports: [

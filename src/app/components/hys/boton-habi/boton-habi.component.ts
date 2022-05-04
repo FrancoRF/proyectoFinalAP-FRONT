@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-boton-habi',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BotonHabiComponent implements OnInit {
 
+  @Input() texto: string = "";
+  @Input() color: string = "";
+  @Output() btnClick = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onClick(){
+    this.btnClick.emit();
   }
 
 }

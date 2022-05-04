@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Habilidad } from 'src/app/models/habilidad';
+import { HabilidadService } from 'src/app/service/habilidad.service';
 
 @Component({
   selector: 'app-habilidades',
@@ -7,9 +9,36 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HabilidadesComponent implements OnInit {
 
-  constructor() { }
+  habilidades: Habilidad[] = [];
+
+  constructor(
+    private habiSer: HabilidadService
+  ) { }
 
   ngOnInit(): void {
+    this.habiSer.getHabilidad().subscribe((habilidades) => {
+      this.habilidades = habilidades;
+    })
+  }
+
+  agregarHabilidades(event: any) {
+
+    this.habiSer.masHabilidades(event).subscribe((habi) => {
+      this.habilidades.push(habi)
+      this.habiSer.getHabilidad().subscribe((habilidades) => {
+        this.habilidades = habilidades;
+      })
+    })
+
+  }
+
+  eliminarHabilidades(habi: Habilidad) {
+
+    this.habiSer.eliminarHabilidad(habi.id)
+      .subscribe(() => {
+        this.habilidades = this.habilidades.filter((t) => t.id !== habi.id)
+      })
+
   }
 
 }

@@ -17,6 +17,11 @@ import { EspacioComponent } from './components/acercade/espacio/espacio.componen
 import { EspaItemComponent } from './components/acercade/espa-item/espa-item.component';
 import { BotonEspaComponent } from './components/acercade/boton-espa/boton-espa.component';
 import { AgregarEspaComponent } from './components/acercade/agregar-espa/agregar-espa.component';
+import { CabeceraComponent } from './components/cabecera/cabecera.component';
+import { AgregarPerComponent } from './components/cabecera/agregar-per/agregar-per.component';
+import { BotonPerComponent } from './components/cabecera/boton-per/boton-per.component';
+import { PerItemComponent } from './components/cabecera/per-item/per-item.component';
+import { PerfilesComponent } from './components/cabecera/perfiles/perfiles.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +37,11 @@ import { AgregarEspaComponent } from './components/acercade/agregar-espa/agregar
     EspaItemComponent,
     BotonEspaComponent,
     AgregarEspaComponent,
+    CabeceraComponent,
+    AgregarPerComponent,
+    BotonPerComponent,
+    PerItemComponent,
+    PerfilesComponent,
        
   ],
   imports: [

@@ -5,7 +5,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
@@ -30,11 +29,14 @@ import { AgregarExpeComponent } from './components/experiencia/agregar-expe/agre
 import { BotonExpeComponent } from './components/experiencia/boton-expe/boton-expe.component';
 import { ExpeItemComponent } from './components/experiencia/expe-item/expe-item.component';
 import { ExperienciasComponent } from './components/experiencia/experiencias/experiencias.component';
+import { AgregarHabiComponent } from './components/hys/agregar-habi/agregar-habi.component';
+import { BotonHabiComponent } from './components/hys/boton-habi/boton-habi.component';
+import { HabiItemComponent } from './components/hys/habi-item/habi-item.component';
+import { HabilidadesComponent } from './components/hys/habilidades/habilidades.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     ExperienciaComponent,
     EducacionComponent,
     HysComponent,
@@ -58,6 +60,10 @@ import { ExperienciasComponent } from './components/experiencia/experiencias/exp
     BotonExpeComponent,
     ExpeItemComponent,
     ExperienciasComponent,
+    AgregarHabiComponent,
+    BotonHabiComponent,
+    HabiItemComponent,
+    HabilidadesComponent,
        
   ],
   imports: [

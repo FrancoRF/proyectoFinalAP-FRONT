@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { UiService } from 'src/app/service/ui.service';
 
 @Component({
   selector: 'app-cabecera',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CabeceraComponent implements OnInit {
 
-  constructor() { }
+  titulo: string = "Perfil:"
+
+  abrirPerfil: boolean = false;
+  subcription?: Subscription;
+
+  constructor(
+    private uiService: UiService
+  ) {
+    this.subcription = this.uiService.onTogglePerfil()
+    .subscribe(value => this.abrirPerfil = value)
+  }
 
   ngOnInit(): void {
   }
+
+  toogleAgregarPerfil(){
+    this.uiService.toggleAgregarPerfil();
+  }
+
 
 }

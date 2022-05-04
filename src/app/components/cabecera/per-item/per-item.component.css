@@ -1,0 +1,46 @@
+.contenedorPer {
+    display: flex;
+}
+
+.per {
+    background-color: white;
+    box-shadow: 0px 3px 4px 2px rgb(0, 0, 0, 0.3);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+    float: left;
+}
+
+.per:hover {
+    box-shadow: 3px 3px 4px rgb(0, 0, 0, 0.5);
+}
+
+.botonEliminar {
+    margin: 5px;
+    float: right;
+    background-color: rgb(255, 83, 83);
+    color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.botonEliminar:hover {
+    cursor: pointer;
+    border: 2px solid black;
+    background-color: red;
+}
+
+.botonEditar {
+    float: right;
+    margin: 5px;
+    background-color: rgb(255, 255, 100);
+    color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.botonEditar:hover {
+    background-color: yellow;
+    border: 2px solid black;
+}

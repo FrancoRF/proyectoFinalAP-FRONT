@@ -1,1 +1,5 @@
-<p>perfiles works!</p>
+<app-agregar-per (onAgregarPerfil)="agregarPerfiles($event)"></app-agregar-per>
+<div class="espacio">
+    <app-per-item *ngFor="let per of perfiles" [per]="per" (onEliminarPer)="eliminarPerfiles(per)">
+    </app-per-item>
+</div>

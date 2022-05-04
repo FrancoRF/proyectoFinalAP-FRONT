@@ -1,1 +1,9 @@
-<p>cabecera works!</p>
+<section class="seccion">
+    <div class="espaTitulo">
+        <h3>{{titulo}}</h3>
+        <app-boton-per class="boton" color="{{abrirPerfil ? 'red' : 'green'}}"
+            texto="{{abrirPerfil ? 'Cerrar' : 'Agregar'}}" (btnClick)="toogleAgregarPerfil()">
+        </app-boton-per>
+    </div>
+    <app-perfiles></app-perfiles>
+</section>

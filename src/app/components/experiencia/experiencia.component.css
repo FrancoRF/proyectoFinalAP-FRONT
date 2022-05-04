@@ -1,11 +1,16 @@
-.row{
-    padding: 20px
+.espaTitulo app-boton-expe {
+    float: right;
 }
 
-div{
-    background-color: #a1b5cb;
+.seccion {
+    width: 98%;
+    border-radius: 10px;
+    border: 2px solid rgb(94, 94, 94);
+    background-color: white;
 }
 
-h1, h3{
-    display: inline;
+h3 {
+    font-size: 20px;
+    margin: 15px 0px 0px 30px;
+    float: left;
 }

@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { EDU } from 'src/app/mock-tasck';
+import { Educacion } from 'src/app/models/educacion';
+import { EducacionService } from 'src/app/service/educacion.service';
+import { EducacionesComponent } from '../educaciones/educaciones.component';
 
 @Component({
   selector: 'app-edu-item',
@@ -7,9 +12,56 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EduItemComponent implements OnInit {
 
-  constructor() { }
+  activeForm: any = FormGroup;
+
+  @Input() edu: Educacion = EDU[0];
+  @Output() onEliminarEdu: EventEmitter<Educacion> = new EventEmitter();
+
+  public abrirModal: boolean = false;
+
+  entidad: string = "";
+  titulo: string = "";
+  fecha: string = "";
+  ubicacion: string = "";
+
+  constructor(
+    private eduSer: EducacionService,
+    private fb: FormBuilder,
+    private emit: EducacionesComponent
+  ) { 
+    this.activeForm = this.fb.group({
+      entidad: new FormControl,
+      titulo: new FormControl,
+      fecha: new FormControl,
+      ubicacion: new FormControl
+    })
+  }
 
   ngOnInit(): void {
+  }
+
+  editarEducacion(submitForm: FormGroup):void {
+    const entidad = submitForm.value;
+    const formData = new FormData();
+    formData.append('entidad', JSON.stringify(entidad))
+    
+    this.eduSer.editEducacion(this.edu.id, formData).subscribe(
+      res=>
+      this.emit.ngOnInit()
+    );
+    this.abrirModal = false;
+  }
+
+  eliminarEdu(edu: Educacion){
+    this.onEliminarEdu.emit(edu)
+  }
+
+  openModal(){
+    this.abrirModal = true;
+  }
+
+  cerrarModal(){
+    this.abrirModal = false;
   }
 
 }

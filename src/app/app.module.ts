@@ -26,6 +26,10 @@ import { AgregarEduComponent } from './components/educacion/agregar-edu/agregar-
 import { BotonEduComponent } from './components/educacion/boton-edu/boton-edu.component';
 import { EduItemComponent } from './components/educacion/edu-item/edu-item.component';
 import { EducacionesComponent } from './components/educacion/educaciones/educaciones.component';
+import { AgregarExpeComponent } from './components/experiencia/agregar-expe/agregar-expe.component';
+import { BotonExpeComponent } from './components/experiencia/boton-expe/boton-expe.component';
+import { ExpeItemComponent } from './components/experiencia/expe-item/expe-item.component';
+import { ExperienciasComponent } from './components/experiencia/experiencias/experiencias.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +54,10 @@ import { EducacionesComponent } from './components/educacion/educaciones/educaci
     BotonEduComponent,
     EduItemComponent,
     EducacionesComponent,
+    AgregarExpeComponent,
+    BotonExpeComponent,
+    ExpeItemComponent,
+    ExperienciasComponent,
        
   ],
   imports: [

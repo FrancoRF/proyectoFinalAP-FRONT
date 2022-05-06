@@ -4,6 +4,7 @@
 
 .seccion {
     width: 98%;
+    margin: 0px 0px 0px 7px;
     border-radius: 10px;
     border: 2px solid rgb(94, 94, 94);
     background-color: white;

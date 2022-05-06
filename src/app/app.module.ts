@@ -38,6 +38,7 @@ import { AgregarProComponent } from './components/proyecto/agregar-pro/agregar-p
 import { BotonProComponent } from './components/proyecto/boton-pro/boton-pro.component';
 import { ProItemComponent } from './components/proyecto/pro-item/pro-item.component';
 import { ProyectosComponent } from './components/proyecto/proyectos/proyectos.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import { ProyectosComponent } from './components/proyecto/proyectos/proyectos.co
     BotonProComponent,
     ProItemComponent,
     ProyectosComponent,
+    HeaderComponent,
        
   ],
   imports: [

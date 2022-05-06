@@ -1,12 +1,20 @@
 .row {
-  background-color: #a1b5cb;
+  margin: 10px 0px 0px 0px;
 }
 
-footer {
-  color: #fefefe;
+.footer {
+  background: rgba(0, 0, 0, 0.699);
+  color: white;
   font-size: 14px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  box-shadow: 2px -2px 5px #999;
+  width: 100%;
+  height: 25px;
+  padding: 2px 5px 0px 5px;
+}
+
+#textoUno {
+  float: left;
+}
+
+#textoDos {
+  float: right;
 }

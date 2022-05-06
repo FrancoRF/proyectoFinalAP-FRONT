@@ -1,5 +1,8 @@
 .contenedorHabi {
     display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 5px 0px 5px;
 }
 
 .contenedorHabi fa-icon {
@@ -25,7 +28,10 @@
 .cajaTitulo {
     text-align: center;
     position: absolute;
-    margin: 90px 0px 0px 90px;
+}
+
+h5 {
+    font-size: 16px;
 }
 
 .habi {

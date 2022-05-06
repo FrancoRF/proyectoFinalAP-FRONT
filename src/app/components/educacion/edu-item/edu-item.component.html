@@ -2,8 +2,8 @@
     <div class="edu">
         <h5>{{edu.entidad}} - {{edu.titulo}} - {{edu.fecha}} - {{edu.ubicacion}}</h5>
     </div>
-    <button class="botonEliminar" (click)="eliminarEdu(edu)">Eliminar</button>
-    <button class="botonEditar" (click)="openModal()">Editar</button>
+    <fa-icon id="delete" [icon]="faDelete" (click)="eliminarEdu(edu)"></fa-icon>
+    <fa-icon id="edit" [icon]="faPencil" (click)="openModal()"></fa-icon>
 </div>
 
 <div *ngIf="abrirModal == true">

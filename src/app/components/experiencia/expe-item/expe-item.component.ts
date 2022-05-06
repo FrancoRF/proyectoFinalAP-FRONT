@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { faTrash, faPenClip } from '@fortawesome/free-solid-svg-icons';
 import { EXPE } from 'src/app/mock-tasck';
 import { Experiencia } from 'src/app/models/experiencia';
 import { ExperienciaService } from 'src/app/service/experiencia.service';
@@ -13,6 +14,8 @@ import { ExperienciasComponent } from '../experiencias/experiencias.component';
 export class ExpeItemComponent implements OnInit {
 
   activeForm: any = FormGroup;
+  faDelete = faTrash;
+  faPencil = faPenClip;
 
   @Input() expe: Experiencia = EXPE[0];
   @Output() onEliminarExpe: EventEmitter<Experiencia> = new EventEmitter();

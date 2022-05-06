@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { UiService } from 'src/app/service/ui.service';
 
 @Component({
   selector: 'app-proyecto',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProyectoComponent implements OnInit {
 
-  constructor() { }
+  titulo: string = "Proyectos:"
+
+  abrirProyecto: boolean = false;
+  subcription?: Subscription;
+
+  constructor(
+    private uiService: UiService
+  ) {
+    this.subcription = this.uiService.onToggleProyecto()
+    .subscribe(value => this.abrirProyecto = value)
+  }
 
   ngOnInit(): void {
+  }
+
+  toogleAgregarProyecto(){
+    this.uiService.toggleAgregarProyecto();
   }
 
 }

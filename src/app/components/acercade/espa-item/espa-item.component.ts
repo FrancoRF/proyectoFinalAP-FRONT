@@ -1,5 +1,6 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { faTrash, faPenClip } from '@fortawesome/free-solid-svg-icons';
 import { ACER } from 'src/app/mock-tasck';
 import { Acercade } from 'src/app/models/acercade';
 import { AcerdadeService } from 'src/app/service/acerdade.service';
@@ -13,6 +14,9 @@ import { EspacioComponent } from '../espacio/espacio.component';
 export class EspaItemComponent implements OnInit {
 
   activeForm: any = FormGroup;
+
+  faDelete = faTrash;
+  faPencil = faPenClip;
 
   @Input() espa: Acercade = ACER[0];
   @Output() onEliminarEspa: EventEmitter<Acercade> = new EventEmitter();

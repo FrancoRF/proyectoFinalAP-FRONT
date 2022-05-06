@@ -8,40 +8,26 @@
     border-radius: 5px;
     margin: 10px;
     width: auto;
-    overflow: hidden;
-    cursor: pointer;
     float: left;
+    padding: 15px 15px 0px 15px;
 }
 
-.espa:hover {
-    box-shadow: 3px 3px 4px rgb(0, 0, 0, 0.5);
+#edit {
+    margin: 0px 0px 0px 10px;
 }
 
-.botonEliminar {
-    margin: 5px;
-    float: right;
-    background-color: rgb(255, 83, 83);
-    color: white;
-    border-radius: 5px;
-    border: 1px solid black;
+#edit:hover {
+    color: rgb(156, 156, 156);
 }
 
-.botonEliminar:hover {
+#delete:hover {
+    color: brown;
+}
+
+fa-icon:hover {
+    font-size: 20px;
+}
+
+fa-icon {
     cursor: pointer;
-    border: 2px solid black;
-    background-color: red;
-}
-
-.botonEditar {
-    float: right;
-    margin: 5px;
-    background-color: rgb(255, 255, 100);
-    color: black;
-    border-radius: 5px;
-    border: 1px solid black;
-}
-
-.botonEditar:hover {
-    background-color: yellow;
-    border: 2px solid black;
 }

@@ -2,8 +2,8 @@
     <div class="expe">
         <h5>{{expe.titulo}} - {{expe.empresa}} - {{expe.fecha}} - {{expe.ubicacion}}</h5>
     </div>
-    <button class="botonEliminar" (click)="eliminarExpe(expe)">Eliminar</button>
-    <button class="botonEditar" (click)="openModal()">Editar</button>
+    <fa-icon id="delete" [icon]="faDelete" (click)="eliminarExpe(expe)"></fa-icon>
+    <fa-icon id="edit" [icon]="faPencil" (click)="openModal()"></fa-icon>
 </div>
 
 <div *ngIf="abrirModal == true">

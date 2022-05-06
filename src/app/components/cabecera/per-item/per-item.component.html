@@ -1,9 +1,14 @@
+<fa-icon id="delete" [icon]="faDelete" (click)="eliminarPer(per)"></fa-icon>
+<fa-icon id="edit" [icon]="faPencil" (click)="openModal()"></fa-icon>
+
 <div class="contenedorPer">
-    <div class="per">
-        <h5>{{per.nombre}} - {{per.titulo}} - {{per.email}} - {{per.ubicacion}}</h5>
+    <!--<h5>{{per.nombre}} - {{per.titulo}} - {{per.email}} - {{per.ubicacion}}</h5>-->
+    <div class="conImagenes">
+        <img [src]="per.imgPortada" class="imgPortada" alt="Foto de Portada">
+        <div class="container">
+            <img [src]="per.imgPerfil" class="imgPerfil" alt="Foto de Perfil">
+        </div>
     </div>
-    <button class="botonEliminar" (click)="eliminarPer(per)">Eliminar</button>
-    <button class="botonEditar" (click)="openModal()">Editar</button>
 </div>
 
 <div *ngIf="abrirModal == true">
@@ -15,7 +20,7 @@
 
                 <div class="form-control">
                     <label for="nombre">Nombre Completo</label>
-                    <input formControlName="entidad" type="text" name="nombre" id="nombre" placeholder="{{per.nombre}}"
+                    <input formControlName="nombre" type="text" name="nombre" id="nombre" placeholder="{{per.nombre}}"
                         required>
                 </div>
 

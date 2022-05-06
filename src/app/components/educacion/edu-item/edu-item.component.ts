@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { faTrash, faPenClip } from '@fortawesome/free-solid-svg-icons';
 import { EDU } from 'src/app/mock-tasck';
 import { Educacion } from 'src/app/models/educacion';
 import { EducacionService } from 'src/app/service/educacion.service';
@@ -13,6 +14,9 @@ import { EducacionesComponent } from '../educaciones/educaciones.component';
 export class EduItemComponent implements OnInit {
 
   activeForm: any = FormGroup;
+
+  faDelete = faTrash;
+  faPencil = faPenClip;
 
   @Input() edu: Educacion = EDU[0];
   @Output() onEliminarEdu: EventEmitter<Educacion> = new EventEmitter();

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { faTrash, faPenClip } from '@fortawesome/free-solid-svg-icons';
 import { PER } from 'src/app/mock-tasck';
 import { Perfil } from 'src/app/models/perfil';
 import { PerfilService } from 'src/app/service/perfil.service';
@@ -20,6 +21,9 @@ export class PerItemComponent implements OnInit {
   public abrirModal: boolean = false;
   public usFilePerfil: any = File;
   public usFilePortada: any = File;
+
+  faDelete = faTrash;
+  faPencil = faPenClip;
 
   nombre: string = "";
   titulo: string = "";

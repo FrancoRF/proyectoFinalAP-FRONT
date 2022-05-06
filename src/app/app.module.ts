@@ -34,6 +34,10 @@ import { AgregarHabiComponent } from './components/hys/agregar-habi/agregar-habi
 import { BotonHabiComponent } from './components/hys/boton-habi/boton-habi.component';
 import { HabiItemComponent } from './components/hys/habi-item/habi-item.component';
 import { HabilidadesComponent } from './components/hys/habilidades/habilidades.component';
+import { AgregarProComponent } from './components/proyecto/agregar-pro/agregar-pro.component';
+import { BotonProComponent } from './components/proyecto/boton-pro/boton-pro.component';
+import { ProItemComponent } from './components/proyecto/pro-item/pro-item.component';
+import { ProyectosComponent } from './components/proyecto/proyectos/proyectos.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +69,10 @@ import { HabilidadesComponent } from './components/hys/habilidades/habilidades.c
     BotonHabiComponent,
     HabiItemComponent,
     HabilidadesComponent,
+    AgregarProComponent,
+    BotonProComponent,
+    ProItemComponent,
+    ProyectosComponent,
        
   ],
   imports: [

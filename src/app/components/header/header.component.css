@@ -1,0 +1,28 @@
+header {
+    display:flex;
+    align-items: inherit;
+}
+
+.navbar {
+    background: rgb(145, 145, 145);
+    color: white;
+    width: 100%;
+    height: 55px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.navImg {
+    float: left;
+    margin: -4px 0px 0px 0px;
+}
+
+.imgUno {
+    width: 100px;
+    height: 45px;
+}
+
+.imgDos {
+    width: 110px;
+    height: 40px;
+}

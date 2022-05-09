@@ -26,3 +26,15 @@ header {
     width: 110px;
     height: 40px;
 }
+
+.navMenu {
+    float: right;
+    margin: -2px 8px 0px 0px;
+}
+
+.cajaMenu {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background: black;
+}

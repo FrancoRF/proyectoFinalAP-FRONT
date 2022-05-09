@@ -4,5 +4,19 @@
             <img src="../../../assets/APLogooo.png" class="imgUno" alt="Logo de Argentina Programa">
             <img src="../../../assets/LogosInti.png" class="imgDos" alt="Logo del Inti">
         </div>
+        <div class="navMenu">
+            <button class="botonMenu" (click)="onMenu()"><b>menu</b></button>
+        </div>
     </nav>
+    <div class="modalMenu" *ngIf="okMenu">
+        <div class="cajaMenu">
+            <ul>
+                <li><a href="#acercade">Acerca de..</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#educacion">Educacion</a></li>
+                <li><a href="#habilidad">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+            </ul>
+        </div>
+    </div>
 </header>

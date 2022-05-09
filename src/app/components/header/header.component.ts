@@ -18,4 +18,8 @@ export class HeaderComponent implements OnInit {
     this.okMenu = true;
   }
 
+  cerrarMenu(){
+    this.okMenu = false
+  }
+
 }

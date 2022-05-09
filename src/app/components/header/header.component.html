@@ -8,7 +8,7 @@
             <button class="botonMenu" (click)="onMenu()"><b>menu</b></button>
         </div>
     </nav>
-    <div class="modalMenu" *ngIf="okMenu">
+    <div class="modalPrincipal" *ngIf="okMenu" (click)="cerrarMenu()">
         <div class="cajaMenu">
             <ul>
                 <li><a href="#acercade">Acerca de..</a></li>

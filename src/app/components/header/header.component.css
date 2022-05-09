@@ -32,9 +32,42 @@ header {
     margin: -2px 8px 0px 0px;
 }
 
+.modalPrincipal {
+    position:fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
 .cajaMenu {
-    width: 200px;
-    height: 200px;
-    position: absolute;
-    background: black;
+    width: 140px;
+    height: 160px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background: rgba(114, 114, 114, 0.89);
+    color: white;
+    margin: 55px 0px 0px 710px;
+}
+
+.cajaMenu ul {
+    list-style: none;
+}
+
+.cajaMenu ul li {
+    display: inline-block;
+    margin-left: -5px;
+}
+
+.cajaMenu ul li a {
+    font-weight: bold;
+    color: white;
+    padding-top: 5px;
+    display: block;
+    text-decoration: none;
+}
+
+.cajaMenu ul li a:hover {
+    box-shadow: 3px 3px 4px rgba(255, 255, 255, 0.712);
 }

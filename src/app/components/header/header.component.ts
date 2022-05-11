@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   public okMenu: boolean = false;
+
+  faLogin = faAngleRight;
 
   constructor() { }
 
@@ -20,6 +23,10 @@ export class HeaderComponent implements OnInit {
 
   cerrarMenu(){
     this.okMenu = false
+  }
+
+  abrirLogin(){
+    
   }
 
 }

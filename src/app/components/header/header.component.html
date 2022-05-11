@@ -9,14 +9,17 @@
         </div>
     </nav>
     <div class="modalPrincipal" *ngIf="okMenu" (click)="cerrarMenu()">
-        <div class="cajaMenu">
-            <ul>
-                <li><a href="#acercade">Acerca de..</a></li>
-                <li><a href="#experiencia">Experiencia</a></li>
-                <li><a href="#educacion">Educacion</a></li>
-                <li><a href="#habilidad">Habilidades</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-            </ul>
+        <div class="cajaPosicion">
+            <div class="cajaMenu">
+                <ul>
+                    <li><a href="#acercade">Acerca de..</a></li>
+                    <li><a href="#experiencia">Experiencia</a></li>
+                    <li><a href="#educacion">Educacion</a></li>
+                    <li><a href="#habilidad">Habilidades</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <button class="botonLogin" (click)="abrirLogin()">Login<fa-icon [icon]="faLogin"></fa-icon></button>
+                </ul>
+            </div>
         </div>
     </div>
 </header>

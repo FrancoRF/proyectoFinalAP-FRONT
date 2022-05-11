@@ -42,13 +42,14 @@ header {
 }
 
 .cajaMenu {
+    position: relative;
     width: 140px;
-    height: 160px;
+    height: auto;
     border: 1px solid black;
     border-radius: 3px;
     background: rgba(114, 114, 114, 0.89);
     color: white;
-    margin: 55px 0px 0px 710px;
+    margin: 60px 0px 0px 440px;
 }
 
 .cajaMenu ul {
@@ -70,4 +71,25 @@ header {
 
 .cajaMenu ul li a:hover {
     box-shadow: 3px 3px 4px rgba(255, 255, 255, 0.712);
+}
+
+.botonLogin{
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    margin: 5px 0px 0px 0px;
+}
+
+.botonLogin fa-icon{
+    margin: 0px 0px 0px 5px;
+}
+
+.botonLogin:hover {
+    box-shadow: 3px 3px 4px rgba(255, 255, 255, 0.712);
+}
+
+.cajaPosicion{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

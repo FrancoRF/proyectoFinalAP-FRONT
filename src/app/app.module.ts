@@ -39,6 +39,8 @@ import { BotonProComponent } from './components/proyecto/boton-pro/boton-pro.com
 import { ProItemComponent } from './components/proyecto/pro-item/pro-item.component';
 import { ProyectosComponent } from './components/proyecto/proyectos/proyectos.component';
 import { HeaderComponent } from './components/header/header.component';
+import { LoginComponent } from './components/auth/login/login.component';
+import { RegistroComponent } from './components/auth/registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -75,6 +77,8 @@ import { HeaderComponent } from './components/header/header.component';
     ProItemComponent,
     ProyectosComponent,
     HeaderComponent,
+    LoginComponent,
+    RegistroComponent,
        
   ],
   imports: [

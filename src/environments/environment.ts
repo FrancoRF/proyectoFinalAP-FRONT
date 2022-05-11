@@ -5,5 +5,6 @@ export const environment = {
   apiBackEdu: 'http://localhost:8080/educaciones/',
   apiBackPro: 'http://localhost:8080/proyectos/',
   apiBackHabi: 'http://localhost:8080/habilidades/',
-  apiBackPer: 'http://localhost:8080/perfiles/'
+  apiBackPer: 'http://localhost:8080/perfiles/',
+  authUrl: 'http://localhost:8080/auth/'
 };

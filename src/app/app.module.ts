@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+import { interceptorProvider } from './interceptor/interceptor.service'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
@@ -90,7 +91,7 @@ import { RegistroComponent } from './components/auth/registro/registro.component
     FontAwesomeModule,
     NgCircleProgressModule.forRoot({})
   ],
-  providers: [],
+  providers: [interceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

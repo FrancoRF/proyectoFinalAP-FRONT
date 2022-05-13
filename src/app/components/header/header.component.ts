@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { TokenService } from 'src/app/service/token.service';
 
 @Component({
   selector: 'app-header',
@@ -9,12 +10,18 @@ import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 export class HeaderComponent implements OnInit {
 
   public okMenu: boolean = false;
+  public estaLogeado: boolean = false;
+  public abrirFormularioLogin: boolean = false;
+  public abrirModalReg: Boolean = false;
 
   faLogin = faAngleRight;
 
-  constructor() { }
+  constructor(
+    private tokenService: TokenService
+  ) { }
 
   ngOnInit(): void {
+    this.estaLogeado = this.tokenService.estaLogeado();
   }
 
   onMenu() {
@@ -25,8 +32,29 @@ export class HeaderComponent implements OnInit {
     this.okMenu = false
   }
 
-  abrirLogin(){
+  iniciarSesion(){
+
+  }
+
+  cerrarSesion(){
     
+  }
+
+  abrirModal(){
+    this.abrirFormularioLogin = true;
+  }
+
+  cerrarModal(){
+    this.abrirFormularioLogin = false;
+  }
+
+  abrirModalRegistro(){
+    this.abrirModalReg = true;
+  }
+
+  cerrarModalRegistro(){
+    this.abrirModalReg = false;
+    this.abrirFormularioLogin = true;
   }
 
 }

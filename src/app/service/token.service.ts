@@ -48,6 +48,7 @@ export class TokenService {
 
   public logOut(): void {
     window.localStorage.clear();
+    location.reload();
   }
 
 }

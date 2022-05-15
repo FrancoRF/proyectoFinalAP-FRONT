@@ -1,6 +1,7 @@
 import { HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, concatMap, Observable, throwError } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
+import { catchError, concatMap } from 'rxjs/operators';
 import { Jwt } from '../models/jwt';
 import { AuthService } from '../service/auth.service';
 import { TokenService } from '../service/token.service';
@@ -24,7 +25,7 @@ export class InterceptorService implements HttpInterceptor {
     let intReq = req;
     const token = this.tokenService.traerToken();
 
-    intReq = this.addToken(req, token)
+    intReq = this.addToken(req, token);
 
     return next.handle(intReq).pipe(catchError((err: HttpErrorResponse) => {
       if(err.status === 401) {

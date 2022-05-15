@@ -32,12 +32,8 @@ export class HeaderComponent implements OnInit {
     this.okMenu = false
   }
 
-  iniciarSesion(){
-
-  }
-
   cerrarSesion(){
-    
+    this.tokenService.logOut();
   }
 
   abrirModal(){

@@ -16,7 +16,7 @@ export class EducacionService {
   ) { }
 
   getEducacion(): Observable<Educacion[]> {
-    return this.http.get<Educacion[]>(this.apiBackEdu)
+    return this.http.get<Educacion[]>(this.apiBackEdu);
   }
 
   get(id: number): Observable<Educacion> {

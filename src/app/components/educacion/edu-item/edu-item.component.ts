@@ -4,6 +4,7 @@ import { faTrash, faPenClip } from '@fortawesome/free-solid-svg-icons';
 import { EDU } from 'src/app/mock-tasck';
 import { Educacion } from 'src/app/models/educacion';
 import { EducacionService } from 'src/app/service/educacion.service';
+import { TokenService } from 'src/app/service/token.service';
 import { EducacionesComponent } from '../educaciones/educaciones.component';
 
 @Component({
@@ -22,6 +23,7 @@ export class EduItemComponent implements OnInit {
   @Output() onEliminarEdu: EventEmitter<Educacion> = new EventEmitter();
 
   public abrirModal: boolean = false;
+  public esAdmin: boolean = false;
 
   entidad: string = "";
   titulo: string = "";
@@ -31,7 +33,8 @@ export class EduItemComponent implements OnInit {
   constructor(
     private eduSer: EducacionService,
     private fb: FormBuilder,
-    private emit: EducacionesComponent
+    private emit: EducacionesComponent,
+    private tokenService: TokenService
   ) { 
     this.activeForm = this.fb.group({
       entidad: new FormControl,
@@ -42,6 +45,11 @@ export class EduItemComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if(this.tokenService.esAdmin()){
+      this.esAdmin = true;
+    } else {
+      this.esAdmin = false;
+    }
   }
 
   editarEducacion(submitForm: FormGroup):void {

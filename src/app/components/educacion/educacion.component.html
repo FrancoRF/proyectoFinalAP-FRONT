@@ -1,8 +1,8 @@
 <section id="educacion" class="seccion">
   <div class="espaTitulo">
     <h3>{{titulo}}</h3>
-    <app-boton-edu class="boton" color="{{abrirEducacion ? 'red' : 'green'}}"
-      texto="{{abrirEducacion ? 'Cerrar' : 'Agregar'}}" (btnClick)="toogleAgregarEducacion()">
+    <app-boton-edu *ngIf="esAdmin" class="boton" color="{{abrirEducacion ? 'red' : 'green'}}"
+      texto="{{abrirEducacion ? '-' : '+'}}" (btnClick)="toogleAgregarEducacion()">
     </app-boton-edu>
   </div>
   <app-educaciones></app-educaciones>

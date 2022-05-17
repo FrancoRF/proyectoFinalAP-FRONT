@@ -1,9 +1,9 @@
 <div class="contenedorPro">
     <div class="pro">
-        <h5>{{pro.titulo}} - {{pro.descripcion}} - <a [href]="pro.link" target="_blank">Ver web</a></h5>
+        <p><b>{{pro.titulo}}</b> - {{pro.descripcion}} - <a [href]="pro.link" target="_blank">Ver web</a></p>
     </div>
-    <fa-icon id="delete" [icon]="faDelete" (click)="eliminarPro(pro)"></fa-icon>
-    <fa-icon id="edit" [icon]="faPencil" (click)="openModal()"></fa-icon>
+    <fa-icon *ngIf="esAdmin" id="delete" [icon]="faDelete" (click)="eliminarPro(pro)"></fa-icon>
+    <fa-icon *ngIf="esAdmin" id="edit" [icon]="faPencil" (click)="openModal()"></fa-icon>
 </div>
 
 <div *ngIf="abrirModal == true">

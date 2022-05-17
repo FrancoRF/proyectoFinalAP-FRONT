@@ -2,8 +2,8 @@
     <div class="espa">
         <p>{{espa.texto}}</p>
     </div>
-    <fa-icon id="delete" [icon]="faDelete" (click)="eliminarEspa(espa)"></fa-icon>
-    <fa-icon id="edit" [icon]="faPencil" (click)="openModal()"></fa-icon>
+    <fa-icon *ngIf="esAdmin" id="delete" [icon]="faDelete" (click)="eliminarEspa(espa)"></fa-icon>
+    <fa-icon *ngIf="esAdmin" id="edit" [icon]="faPencil" (click)="openModal()"></fa-icon>
 </div>
 
 <div *ngIf="abrirModal == true">

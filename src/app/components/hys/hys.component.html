@@ -1,8 +1,8 @@
 <section id="habilidad" class="seccion">
   <div class="espaTitulo">
     <h3>{{titulo}}</h3>
-    <app-boton-habi class="boton" color="{{abrirHabilidad ? 'red' : 'green'}}"
-      texto="{{abrirHabilidad ? 'Cerrar' : 'Agregar'}}" (btnClick)="toogleAgregarHabilidad()">
+    <app-boton-habi *ngIf="esAdmin" class="boton" color="{{abrirHabilidad ? 'red' : 'green'}}"
+      texto="{{abrirHabilidad ? '-' : '+'}}" (btnClick)="toogleAgregarHabilidad()">
     </app-boton-habi>
   </div>
   <app-habilidades></app-habilidades>

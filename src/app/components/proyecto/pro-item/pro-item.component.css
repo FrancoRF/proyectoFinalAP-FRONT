@@ -8,12 +8,7 @@
     border-radius: 5px;
     margin: 10px;
     padding: 5px;
-    cursor: pointer;
     float: left;
-}
-
-.pro:hover {
-    box-shadow: 3px 3px 4px rgb(0, 0, 0, 0.5);
 }
 
 #edit {

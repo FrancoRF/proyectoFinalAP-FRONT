@@ -4,6 +4,7 @@ import { faTrash, faPenClip } from '@fortawesome/free-solid-svg-icons';
 import { PER } from 'src/app/mock-tasck';
 import { Perfil } from 'src/app/models/perfil';
 import { PerfilService } from 'src/app/service/perfil.service';
+import { TokenService } from 'src/app/service/token.service';
 import { PerfilesComponent } from '../perfiles/perfiles.component';
 
 @Component({
@@ -19,6 +20,7 @@ export class PerItemComponent implements OnInit {
   @Output() onEliminarPer: EventEmitter<Perfil> = new EventEmitter();
 
   public abrirModal: boolean = false;
+  public esAdmin: boolean = false;
   public usFilePerfil: any = File;
   public usFilePortada: any = File;
 
@@ -33,7 +35,8 @@ export class PerItemComponent implements OnInit {
   constructor(
     private eduPer: PerfilService,
     private fb: FormBuilder,
-    private emit: PerfilesComponent
+    private emit: PerfilesComponent,
+    private tokenService: TokenService
   ) { 
     this.activeForm = this.fb.group({
       nombre: new FormControl,
@@ -44,6 +47,11 @@ export class PerItemComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if(this.tokenService.esAdmin()){
+      this.esAdmin = true;
+    } else {
+      this.esAdmin = false;
+    }
   }
 
   capturarPerfil(event: any) {

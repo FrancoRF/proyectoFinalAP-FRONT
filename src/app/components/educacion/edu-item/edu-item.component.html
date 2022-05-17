@@ -1,9 +1,9 @@
 <div class="contenedorEdu">
     <div class="edu">
-        <h5>{{edu.entidad}} - {{edu.titulo}} - {{edu.fecha}} - {{edu.ubicacion}}</h5>
+        <p><b>{{edu.entidad}}</b> - {{edu.titulo}} - {{edu.fecha}} - {{edu.ubicacion}}</p>
     </div>
-    <fa-icon id="delete" [icon]="faDelete" (click)="eliminarEdu(edu)"></fa-icon>
-    <fa-icon id="edit" [icon]="faPencil" (click)="openModal()"></fa-icon>
+    <fa-icon *ngIf="esAdmin" id="delete" [icon]="faDelete" (click)="eliminarEdu(edu)"></fa-icon>
+    <fa-icon *ngIf="esAdmin" id="edit" [icon]="faPencil" (click)="openModal()"></fa-icon>
 </div>
 
 <div *ngIf="abrirModal == true">

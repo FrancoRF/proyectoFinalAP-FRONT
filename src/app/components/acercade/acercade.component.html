@@ -2,9 +2,10 @@
     <div class="espaTitulo">
         <h3>{{titulo}}</h3>
         <app-boton-espa
+            *ngIf="esAdmin"
             class="boton"
             color="{{abrirEspacio ? 'red' : 'green'}}"
-            texto="{{abrirEspacio ? 'Cerrar' : 'Agregar'}}"
+            texto="{{abrirEspacio ? '-' : '+'}}"
             (btnClick)="toogleAgregarEspacio()"
         ></app-boton-espa>
     </div> 

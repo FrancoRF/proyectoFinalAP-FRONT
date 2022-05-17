@@ -9,6 +9,8 @@
   width: 100%;
   height: 25px;
   padding: 2px 5px 0px 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 #textoUno {

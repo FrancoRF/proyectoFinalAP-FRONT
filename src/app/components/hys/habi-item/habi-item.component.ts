@@ -4,6 +4,7 @@ import { faTrash, faPenClip } from '@fortawesome/free-solid-svg-icons';
 import { HABI } from 'src/app/mock-tasck';
 import { Habilidad } from 'src/app/models/habilidad';
 import { HabilidadService } from 'src/app/service/habilidad.service';
+import { TokenService } from 'src/app/service/token.service';
 import { HabilidadesComponent } from '../habilidades/habilidades.component';
 
 @Component({
@@ -22,6 +23,7 @@ export class HabiItemComponent implements OnInit {
   @Output() onEliminarHabi: EventEmitter<Habilidad> = new EventEmitter();
 
   public abrirModal: boolean = false;
+  public esAdmin: boolean = false;
 
   titulo: string = "";
   porcentaje: number = 0;
@@ -29,7 +31,8 @@ export class HabiItemComponent implements OnInit {
   constructor(
     private habiSer: HabilidadService,
     private fb: FormBuilder,
-    private emit: HabilidadesComponent
+    private emit: HabilidadesComponent,
+    private tokenService: TokenService
   ) { 
     this.activeForm = this.fb.group({
       titulo: new FormControl,
@@ -38,6 +41,11 @@ export class HabiItemComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if(this.tokenService.esAdmin()){
+      this.esAdmin = true;
+    } else {
+      this.esAdmin = false;
+    }
   }
 
   editarHabilidad(submitForm: FormGroup):void {

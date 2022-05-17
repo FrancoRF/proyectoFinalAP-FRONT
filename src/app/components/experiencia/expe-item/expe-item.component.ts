@@ -4,6 +4,7 @@ import { faTrash, faPenClip } from '@fortawesome/free-solid-svg-icons';
 import { EXPE } from 'src/app/mock-tasck';
 import { Experiencia } from 'src/app/models/experiencia';
 import { ExperienciaService } from 'src/app/service/experiencia.service';
+import { TokenService } from 'src/app/service/token.service';
 import { ExperienciasComponent } from '../experiencias/experiencias.component';
 
 @Component({
@@ -21,6 +22,7 @@ export class ExpeItemComponent implements OnInit {
   @Output() onEliminarExpe: EventEmitter<Experiencia> = new EventEmitter();
 
   public abrirModal: boolean = false;
+  public esAdmin: boolean = false;
 
   titulo: string = "";
   empresa: string = "";
@@ -30,7 +32,8 @@ export class ExpeItemComponent implements OnInit {
   constructor(
     private expeSer: ExperienciaService,
     private fb: FormBuilder,
-    private emit: ExperienciasComponent
+    private emit: ExperienciasComponent,
+    private tokenService: TokenService
   ) { 
     this.activeForm = this.fb.group({
       titulo: new FormControl,
@@ -41,6 +44,11 @@ export class ExpeItemComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if(this.tokenService.esAdmin()){
+      this.esAdmin = true;
+    } else {
+      this.esAdmin = false;
+    }
   }
 
   editarExperiencia(submitForm: FormGroup):void {

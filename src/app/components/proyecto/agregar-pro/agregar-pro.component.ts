@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Subscription } from 'rxjs';
+import { TokenService } from 'src/app/service/token.service';
 import { UiService } from 'src/app/service/ui.service';
 
 @Component({
@@ -19,10 +20,12 @@ export class AgregarProComponent implements OnInit {
   abrirProyecto: boolean = false;
   aderir?: Subscription;
   activeForm: any = FormGroup;
+  public nombreUsuario: string = "";
 
   constructor(
     private fb: FormBuilder,
-    private uiService: UiService
+    private uiService: UiService,
+    private tokenService: TokenService
   ) { 
     this.activeForm = this.fb.group({
       titulo: new FormControl,
@@ -35,12 +38,15 @@ export class AgregarProComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.nombreUsuario = this.tokenService.traerNombreUsuario();
   }
 
   onSubmit(submitForm: FormGroup){
     const entidad = submitForm.value;
+    const nombreUs = this.nombreUsuario;
     const formData = new FormData();
-    formData.append('entidad', JSON.stringify(entidad))
+    formData.append('entidad', JSON.stringify(entidad));
+    formData.append('nombreUs', nombreUs);
 
     this.onAgregarProyecto.emit(formData);
     this.abrirProyecto = false;

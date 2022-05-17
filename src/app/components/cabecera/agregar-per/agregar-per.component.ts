@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Subscription } from 'rxjs';
+import { TokenService } from 'src/app/service/token.service';
 import { UiService } from 'src/app/service/ui.service';
 
 @Component({
@@ -19,6 +20,7 @@ export class AgregarPerComponent implements OnInit {
 
   public usFilePerfil: any = File;
   public usFilePortada: any = File;
+  public nombreUsuario: string = "";
 
   abrirPerfil: boolean = false;
   aderir?: Subscription;
@@ -26,7 +28,8 @@ export class AgregarPerComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private uiService: UiService
+    private uiService: UiService,
+    private tokenService: TokenService
   ) { 
     this.activeForm = this.fb.group({
       nombre: new FormControl,
@@ -40,6 +43,7 @@ export class AgregarPerComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.nombreUsuario = this.tokenService.traerNombreUsuario();
   }
 
   capturarPerfil(event: any) {
@@ -54,8 +58,10 @@ export class AgregarPerComponent implements OnInit {
 
   onSubmit(submitForm: FormGroup){
     const entidad = submitForm.value;
+    const nombreUs = this.nombreUsuario;
     const formData = new FormData();
-    formData.append('entidad', JSON.stringify(entidad))
+    formData.append('entidad', JSON.stringify(entidad));
+    formData.append('nombreUs', nombreUs);
     formData.append('imagenPerfil', this.usFilePerfil);
     formData.append('imagenPortada', this.usFilePortada);
 

@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Subscription } from 'rxjs';
+import { TokenService } from 'src/app/service/token.service';
 import { UiService } from 'src/app/service/ui.service';
 
 @Component({
@@ -17,8 +18,10 @@ export class AgregarEspaComponent implements OnInit {
   abrirEspacio: boolean = false;
   aderir?: Subscription;
   activeForm: any = FormGroup;
+  public nombreUsuario: string = "";
 
   constructor(
+    private tokenService: TokenService,
     private fb: FormBuilder,
     private uiService: UiService
   ) { 
@@ -31,12 +34,15 @@ export class AgregarEspaComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.nombreUsuario = this.tokenService.traerNombreUsuario();
   }
 
   onSubmit(submitForm: FormGroup){
     const entidad = submitForm.value;
+    const nombreUs = this.nombreUsuario;
     const formData = new FormData();
-    formData.append('entidad', JSON.stringify(entidad))
+    formData.append('entidad', JSON.stringify(entidad));
+    formData.append('nombreUs', nombreUs);
 
     this.onAgregarEspacio.emit(formData);
     this.abrirEspacio = false;

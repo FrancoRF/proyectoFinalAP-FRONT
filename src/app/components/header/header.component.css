@@ -122,6 +122,7 @@ header {
     background-color: rgb(150, 0, 0);
     border-radius: 5px;
     color: rgb(255, 255, 255);
+    margin: 10px 0px 0px 0px;
 }
 
 .botonLogin fa-icon {

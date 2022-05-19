@@ -1,10 +1,10 @@
 export const environment = {
   production: true,
-  apiBackAcer: 'http://localhost:8080/auth/contenedores/',
-  apiBackExpe: 'http://localhost:8080/auth/experiencias/',
-  apiBackEdu: 'http://localhost:8080/auth/educaciones/',
-  apiBackPro: 'http://localhost:8080/auth/proyectos/',
-  apiBackHabi: 'http://localhost:8080/auth/habilidades/',
-  apiBackPer: 'http://localhost:8080/auth/perfiles/',
-  authUrl: 'http://localhost:8080/auth/'
+  apiBackAcer: 'https://portafolio-web-ap.herokuapp.com/auth/contenedores/',
+  apiBackExpe: 'https://portafolio-web-ap.herokuapp.com/auth/experiencias/',
+  apiBackEdu: 'https://portafolio-web-ap.herokuapp.com/auth/educaciones/',
+  apiBackPro: 'https://portafolio-web-ap.herokuapp.com/auth/proyectos/',
+  apiBackHabi: 'https://portafolio-web-ap.herokuapp.com/auth/habilidades/',
+  apiBackPer: 'https://portafolio-web-ap.herokuapp.com/auth/perfiles/',
+  authUrl: 'https://portafolio-web-ap.herokuapp.com/auth/'
 };

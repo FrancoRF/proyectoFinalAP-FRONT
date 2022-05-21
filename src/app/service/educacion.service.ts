@@ -20,12 +20,12 @@ export class EducacionService {
   }
 
   get(id: number): Observable<Educacion> {
-    const url = `${this.apiBackEdu}/${id}`
+    const url = `${this.apiBackEdu}/${id}`;
     return this.http.get<Educacion>(url);
   }
 
   masEducaciones(formData: FormData): Observable<any> {
-    return this.http.post(this.apiBackEdu + 'crear', formData);
+    return this.http.post(this.apiBackEdu + 'crear', formData)
   }
 
   editEducacion(id: number, formData: FormData): Observable<any> {

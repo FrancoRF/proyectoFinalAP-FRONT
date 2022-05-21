@@ -48,7 +48,7 @@ export class AgregarEduComponent implements OnInit {
     const nombreUs = this.nombreUsuario;
     const formData = new FormData();
     formData.append('entidad', JSON.stringify(entidad));
-    formData.append('nombreUs', nombreUs)
+    formData.append('nombreUs', nombreUs);
 
     this.onAgregarEducacion.emit(formData);
     this.abrirEducacion = false;

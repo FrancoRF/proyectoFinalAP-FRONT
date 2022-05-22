@@ -1,8 +1,10 @@
 <fa-icon *ngIf="esAdmin" id="delete" [icon]="faDelete" (click)="eliminarPer(per)"></fa-icon>
 <fa-icon *ngIf="esAdmin" id="edit" [icon]="faPencil" (click)="openModal()"></fa-icon>
 
+<div class="conInfo">
+    <p><b>{{per.nombre}}</b> - {{per.titulo}} - {{per.email}} - {{per.ubicacion}}</p>
+</div>
 <div class="contenedorPer">
-    <!--<h5>{{per.nombre}} - {{per.titulo}} - {{per.email}} - {{per.ubicacion}}</h5>-->
     <div class="conImagenes">
         <img [src]="per.imgPortada" class="imgPortada" alt="Foto de Portada">
         <div class="container">

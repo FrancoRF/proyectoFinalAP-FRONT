@@ -21,7 +21,7 @@ export class AgregarEduComponent implements OnInit {
   abrirEducacion: boolean = false;
   aderir?: Subscription;
   activeForm: any = FormGroup;
-  public nombreUsuario: string = "";
+  public nombreUsuario: any;
 
   constructor(
     private tokenService: TokenService,
@@ -48,7 +48,7 @@ export class AgregarEduComponent implements OnInit {
     const nombreUs = this.nombreUsuario;
     const formData = new FormData();
     formData.append('entidad', JSON.stringify(entidad));
-    formData.append('nombreUs', JSON.stringify(nombreUs));
+    formData.append('nombreUs', nombreUs);
 
     this.onAgregarEducacion.emit(formData);
     this.abrirEducacion = false;

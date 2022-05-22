@@ -20,7 +20,7 @@ export class AgregarProComponent implements OnInit {
   abrirProyecto: boolean = false;
   aderir?: Subscription;
   activeForm: any = FormGroup;
-  public nombreUsuario: string = "";
+  public nombreUsuario: any;
 
   constructor(
     private fb: FormBuilder,

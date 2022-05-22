@@ -20,7 +20,7 @@ export class AgregarPerComponent implements OnInit {
 
   public usFilePerfil: any = File;
   public usFilePortada: any = File;
-  public nombreUsuario: string = "";
+  public nombreUsuario: any;
 
   abrirPerfil: boolean = false;
   aderir?: Subscription;

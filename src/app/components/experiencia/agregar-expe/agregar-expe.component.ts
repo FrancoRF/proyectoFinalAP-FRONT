@@ -21,7 +21,7 @@ export class AgregarExpeComponent implements OnInit {
   abrirExperiencia: boolean = false;
   aderir?: Subscription;
   activeForm: any = FormGroup;
-  public nombreUsuario: string = "";
+  public nombreUsuario: any;
 
   constructor(
     private fb: FormBuilder,

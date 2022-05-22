@@ -19,7 +19,7 @@ export class AgregarHabiComponent implements OnInit {
   abrirHabilidad: boolean = false;
   aderir?: Subscription;
   activeForm: any = FormGroup;
-  public nombreUsuario: string = "";
+  public nombreUsuario: any;
 
   constructor(
     private fb: FormBuilder,
